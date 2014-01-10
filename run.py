@@ -1,0 +1,40 @@
+import sys
+from CLI import generate_vaida
+from CLI import verify_vaida
+
+def set_player(new_player):
+    return
+
+if len(sys.argv) < 2:
+    print ("Please enter a command. For help use 'help' command")
+    exit()
+
+command = sys.argv[1]
+print (command)
+
+if command == "generate":
+    generate_vaida.generate()
+elif command == "verify":
+    if len(sys.argv) < 3:
+        print ("Please enter a file name to verify")
+    else:
+        vaida_file = sys.argv[2]
+        verify_vaida.verify(vaida_file)
+elif command == "help":
+    print ("VAIDA")
+    print ("The available commands are:")
+    print ("   ui          VAIDA UI (RECOMMENDED)")
+    print ("   generate    Interactively generate a VAIDA file")
+    print ("   verify      Interactively verify a VAIDA file (using VLC)")
+elif command == "set-player":
+    if len(sys.argv) < 3:
+        print ("Please enter a video player after set-player")
+    else:
+        new_player = sys.argv[2]
+        set_player(new_player)
+elif command == "ui":
+    import GUI.Application
+    
+    
+else:
+    print("Unknown command '" + command + "'. For help enter help")
