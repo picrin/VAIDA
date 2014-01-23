@@ -43,7 +43,7 @@ else:
     # TODO Confirm for other
     true_gpg_path = os.path.expanduser('~/.gnupg')
     tmp_home = os.path.expanduser('tmpgpg/')
-create_dir(tmp_home)
+    create_dir(tmp_home)
 
 def generate_gpg_key(real_name, nickname, email, passphrase, key_length = 2048, key_type = "RSA", expire_date = "1y"):
     gpg = gnupg.GPG(gnupghome = true_gpg_path)

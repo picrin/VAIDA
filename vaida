@@ -1,4 +1,4 @@
-#! /usr/bin/python3.3
+#! /usr/bin/python3
 import sys
 from CLI import generate_vaida
 from CLI import verify_vaida

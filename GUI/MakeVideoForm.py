@@ -4,7 +4,7 @@ from GPG.gpglib import public_keys_details, create_vaida
 import re
 from GPG.uIntToString import uIntToString
 from os.path import expanduser
-
+from GPG.gpglib import GPGException
 class MakeVideoForm (QDialog):
     
     def showMessage(self, text):
